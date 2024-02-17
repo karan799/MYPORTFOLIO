@@ -6,8 +6,11 @@ import './tailwind.css';
 import ProjectDetails from './ProjectDetails';
 import Navbar from './Navbar';
 import { useUser } from './UserContext';
+import { aboutme, fusername, job, navLinks, technologies } from './Portfolio-Website/src/constants';
 
 const Resumeportfolio = ({userDataa}) => {
+  console.log(fusername);
+  console.log(technologies);
   const [staticData, setStaticData] =useState({
     name: 'Karan Bhatia',
     role: 'Web Developer',
@@ -32,7 +35,7 @@ const Resumeportfolio = ({userDataa}) => {
         detailsLink: '/project/project2-details',
       },
     ],
-    skills: ['React', 'JavaScript', 'HTML/CSS'],
+    skills: {technologies},
     socialLinks: [
       { name: 'Github', link: 'https://github.com/karan799' }, // Replace '#' with the actual link
       { name: 'Instagram', link: '#' }, // Replace '#' with the actual link
@@ -73,9 +76,9 @@ const Resumeportfolio = ({userDataa}) => {
           </div> */}
           <div className="text-center" id='AboutMe'>
           
-            <h1 className="text-4xl font-bold tracking-tight text-teal-500 sm:text-6xl animate-pulse">{userDataa.username}{usernameee}</h1>
-            <p className="text-gray-600">{staticData.role}</p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">{userDataa.aboutme}</p>
+            <h1 className="text-4xl font-bold tracking-tight text-teal-500 sm:text-6xl animate-pulse"> {fusername}</h1>
+            <p className="text-gray-600">{job}</p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">{aboutme}</p>
             {/* <h3 className="text-3xl font-bold text-teal-500">Skills</h3>
             <div className="mt-6 text-lg leading-8 text-gray-600">
               <ul className="list-disc list-inside">
@@ -133,8 +136,8 @@ const Resumeportfolio = ({userDataa}) => {
 
         <section className="mb-8" id="Skills">
           <h2 className="text-2xl text-teal-500 mb-4">Skills</h2>
-          <ul className="list-disc list-inside">
-            {userDataa.skills?.map((skills,index)=><li key={index}>{skills}</li>)}
+          <ul className="list-disc  text-black list-inside">
+            {technologies?.map((skills,index)=><li key={index}>{skills.name}</li>)}
             
           </ul>
         </section>

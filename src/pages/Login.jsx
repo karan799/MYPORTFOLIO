@@ -34,6 +34,7 @@ const Login = ({ onLogin }) => {
     
       if(formData.password==="karan123")
       setError("wrong password")
+    else
       navigate("/userForm")
           // Retrieve user's hashed password from Firebase
         //   signInWithEmailAndPassword(auth, "g@gmail.com", "gggggggg")

@@ -7,10 +7,11 @@ import {auth, db}from './config/firebase';
 import {createUserWithEmailAndPassword as create,signInWithEmailAndPassword,signOut}from "firebase/auth";
 import { getDocs, collection, addDoc, doc, deleteDoc } from 'firebase/firestore';
 import ParticularProject from './ParticularProject';
+import { projects } from './Portfolio-Website/src/constants';
 
 const ProjectDetails = () => {
   const { projectId } = useParams();
-
+projects
   const [projectData,setprojectData]=useState();
 
   // Placeholder data (replace with actual data or fetch from an API)
@@ -52,7 +53,7 @@ const ProjectDetails = () => {
 
   return (
     < >
-      {projectData?.map(function(projectDataa) {
+      {projects?.map(function(projectDataa) {
     return  <ParticularProject projectData={projectDataa}/>;
 })}
     
