@@ -4,6 +4,7 @@ import {getFirestore} from "firebase/firestore"
 
 //we tell which service we want to use
 import {getAuth} from "firebase/auth";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBLzRxihGFFbJY_KIVsUvB6G1F28LZ5MRE",
   authDomain: "start-62afb.firebaseapp.com",
@@ -20,3 +21,8 @@ const analytics = getAnalytics(app);
 //for very service we create a variable
 export const auth=getAuth(app);
 export const db=getFirestore(app);
+
+
+// Import Admin SDK
+
+

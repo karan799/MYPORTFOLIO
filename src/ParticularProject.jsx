@@ -8,7 +8,8 @@ function ParticularProject({projectData}) {
               <h3 className="text-xl font-semibold mb-2">{projectData?.title}</h3>
               <p className="text-gray-700 mb-2">{projectData?.description}</p>
               <p className="text-teal-500">
-                GitHub: <a href={`${projectData?.liveLink}`} >Project 1</a>
+              GitHub: <a href={projectData?.livelink} target="_blank" rel="noopener noreferrer">Project 1</a>
+
               </p>
               <Link to= {`project/${projectData?.id}`} className="btn-primary mt-4">
                 Details
